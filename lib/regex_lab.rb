@@ -1,9 +1,11 @@
-def starts_with_a_vowel?(word)
+require "pry"
 
+def starts_with_a_vowel?(word)
+  ["a","e","i","o","u"].include?(word.split("").first.downcase)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-
+  text.scan(/\bun\w*ing/)
 end
 
 def words_five_letters_long(text)
